@@ -3,11 +3,15 @@
 <h1>Articles</h1>
 <dl>
 <% @articles.each do |article| %>
-<dt><%= article.title %> By:<%=article.author.name %></dt>
+<dt><%= link_to article.title, author_article_path(article.author_id, article.id) %> By:<%=link_to article.author.name, author_path(article.author_id) %></dt>
 <dd><%= truncate(article.body, :length => 80)%></dd>
 <dd>Comment count: <%= article.comments.count%></dd>
 <% end %>
 </ul>
 
 
-From here, you should be able to click on an author and view their Show page, or click on the title of the Article and view the entire Article and its comments
+
+
+
+
+
