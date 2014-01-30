@@ -14,10 +14,15 @@ class ArticlesController < ApplicationController
     redirect_to author_path(@author.id)
   end
 
+
   def edit
+    @article = Article.find(params[:id])
   end
 
   def update
+    @article = Article.find(params[:id])
+    @article.update_attributes(update_params)
+    redirect_to author_path(@author.id)
   end
 
   def show
@@ -28,6 +33,10 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title, :body, :id, :author_id)
+  end
+
+  def update_params
+    params.require(:article).permit(:title, :body)
   end
 
   def get_author

@@ -6,3 +6,4 @@
   <li><%= comment.body %></li>
 </ul>
 <% end %>
+<%= link_to 'Edit', edit_author_article_path(@article.author_id, @article.id)%>

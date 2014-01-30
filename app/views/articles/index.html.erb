@@ -1,17 +1,10 @@
 
+ <h1>Articles</h1>
+  <dl>
+  <% @articles.each do |article| %>
 
-<h1>Articles</h1>
-<dl>
-<% @articles.each do |article| %>
-<dt><%= link_to article.title, author_article_path(article.author_id, article.id) %> By:<%=link_to article.author.name, author_path(article.author_id) %></dt>
-<dd><%= truncate(article.body, :length => 80)%></dd>
-<dd>Comment count: <%= article.comments.count%></dd>
-<% end %>
-</ul>
-
-
-
-
-
-
-
+ <dt><%= link_to article.title, author_article_path(article.author_id, article.id) %> By:<%=link_to article.author.name, author_path(article.author_id) %></dt>
+  <dd><%= truncate(article.body, :length => 80)%></dd>
+  <dd>Comment count: <%= article.comments.count%></dd>
+  <% end %>
+  </ul>

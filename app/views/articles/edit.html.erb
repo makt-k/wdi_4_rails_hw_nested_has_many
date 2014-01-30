@@ -1,0 +1,5 @@
+<%= form_for [@author, @article] do |form| %>
+  <p><%= form.text_field :title, placeholder: "Title" %></p>
+  <p><%= form.text_field :body, placeholder: "Start writing" %></p>
+  <p><%= form.submit %></p>
+<% end %>
