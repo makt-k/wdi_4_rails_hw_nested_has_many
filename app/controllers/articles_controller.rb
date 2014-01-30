@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :get_author
 
   def index
-    @articles = Article.all.order(updated_at: :desc)
+    @articles = Article.all.order(created_at: :desc)
   end
 
   def new
