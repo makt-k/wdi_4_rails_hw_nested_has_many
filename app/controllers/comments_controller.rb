@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
 
   def create
     @article.comments << Comment.create!(comment_params)
-    redirect_to
+    redirect_to author_article_path(@author.id, @article.id)
   end
 
   private
