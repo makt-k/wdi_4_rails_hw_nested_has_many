@@ -1,2 +1,10 @@
 <h1> <%= @author.name %></h1>
+<h2>Articles:</h2>
+<dl>
+  <% @author.articles.each do |article| %>
+  <dt>Title: <%=article.title%></dt><dt>Body: <%= article.body%></dt>
+  <% end %>
+</dl>
+
+<%= link_to "New Article", new_author_article_path(@author.id) %>
 
