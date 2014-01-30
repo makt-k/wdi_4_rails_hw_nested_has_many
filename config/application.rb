@@ -17,6 +17,5 @@ module SharedBlog
     config.assets.initialize_on_precompile = false
 
   end
-  config.assets.initialize_on_precompile = false
 end
 
