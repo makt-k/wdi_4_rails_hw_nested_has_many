@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
   before_action :get_author
 
+  skip_before_action :authenticate_admin!, only: [:index]
+
   def index
     @articles = Article.all.order(created_at: :desc)
   end
