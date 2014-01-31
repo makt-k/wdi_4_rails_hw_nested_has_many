@@ -28,9 +28,6 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-
-gem 'devise'
-
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -38,13 +35,15 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'bootstrap-sass', '~> 3.0.3.0'
+  gem 'devise'
 end
 
 ruby "2.0.0"
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
-gem 'bootstrap-sass', '~> 3.0.3.0'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
