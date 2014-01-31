@@ -10,10 +10,6 @@ group :development do
   gem "rails-erd", github: 'bshelton229/rails-erd', branch: 'mavericks'
 end
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
-gem 'bootstrap-sass', '~> 3.0.3.0'
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -45,6 +41,10 @@ group :production do
 end
 
 ruby "2.0.0"
+
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass', '~> 3.0.3.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
