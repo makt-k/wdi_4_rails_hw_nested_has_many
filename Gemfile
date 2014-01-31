@@ -35,14 +35,14 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'sass-rails', '~> 4.0.0'
-  gem 'bootstrap-sass', '~> 3.0.3.0'
-  gem 'devise'
 end
+
+gem 'devise'
+gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass', '~> 3.0.3.0'
 
 ruby "2.0.0"
 
-# Use SCSS for stylesheets
 
 
 # Use ActiveModel has_secure_password
